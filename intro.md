@@ -35,3 +35,11 @@ filename includes .test or .spec
 ```shell
 npm test
 ```
+
+## 7B to run only one test
+
+```shell
+npm test --testFile fileTOBeTested.test.js
+```
+
+All tests must be independant. Because jest runs them in a random order.
