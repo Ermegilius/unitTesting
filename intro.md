@@ -4,7 +4,7 @@ docs: https://jestjs.io
 
 ## 1. Create a project folder
 
-## 2. Create packsage.json
+## 2. Create package.json
 
 ```shell
 npm init -y
@@ -16,7 +16,7 @@ npm init -y
 npm i jest --save-dev
 ```
 
-# 4. Modify test comand in package.json
+# 4. Modify test command in package.json
 
 ```json
 "scripts": {
@@ -42,4 +42,4 @@ npm test
 npm test --testFile fileTOBeTested.test.js
 ```
 
-All tests must be independant. Because jest runs them in a random order.
+All tests must be independent. Because jest runs them in a random order.
