@@ -59,12 +59,25 @@ module.exports = class PhoneRegister {
                 }
             }
         }
-
         return numbersFound;
     };
 
     getName(number) {
-
+        if (arguments.length < 1) {
+            throw new Error('missing parameter')
+        }
+        let namesFound = {};
+        for (const person of this.#register) {
+            for (const phone of person.phones) {
+                if (phone.number === number) {
+                    namesFound = {
+                        firstName: person.firstName,
+                        lastName: person.lastName
+                    };
+                }
+            }
+        }
+        return namesFound;
     }
 };//end of Class
 

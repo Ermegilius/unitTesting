@@ -2,7 +2,7 @@
 
 ## **getName(number)**
 
-The method searched the given number from the registry. If thr number is found, returns an object of the owner:
+The method searched the given number from the registry. If the number is found, returns an object of the owner:
 
 ```json
 {

@@ -193,18 +193,18 @@ describe('Test cases for getAllNumbersByType', () => {
         ];
         expect(register.getAllNumbersByType('mobile')).toEqual(expectedResult);
     });
-    test('Test 2: type:mobile', () => {
+    test('Test 2: type:work', () => {
         const register = new PhoneRegister(defaultData);
         const expectedResult = [
             {
                 "firstName": "Leila",
                 "lastName": "Musterfrau",
-                "phones": [{ "type": "work", "number": "9876543210" }]
+                "number": { "type": "work", "number": "9876543210" }
             },
             {
                 "firstName": "Leila",
                 "lastName": "Musterfrau",
-                "phones": [{ "type": "work", "number": "00022233344" }]
+                "number": { "type": "work", "number": "00022233344" }
             },
             {
                 "firstName": "Matt",
@@ -216,25 +216,34 @@ describe('Test cases for getAllNumbersByType', () => {
     });
     test('Test 3: type x', () => {
         const register = new PhoneRegister(defaultData);
-        expect(() => register.getAllNumbersByType('x')).toEqual([]);
+        expect(register.getAllNumbersByType('x')).toEqual([]);
     });
     test('Test: missing parameter', () => {
         const register = new PhoneRegister(defaultData);
-        expect(register.getAllNumbersByType())
+        expect(() => register.getAllNumbersByType())
             .toThrow('missing parameter');
     });
 });//end describe getAllNumbersByType
 
 describe('Testing getName', () => {
     const register = new PhoneRegister(defaultData);
+    describe('Test 1-2', () => {
+        const testValues = [
+            //number       //result
+            ["0123456789", { "firstName": "Leila", "lastName": "Musterfrau" }],
+            ["574743210", { "firstName": "Matt", "lastName": "River" }]
+        ]
 
-    const testValues = [
-        //number       //result
-        ["564564534", { "firstName": "Leila", "lastName": "Musterfrau" }],
-        ["574743210", { "firstName": "Matt", "lastName": "River" }]
-    ]
+        test.each(testValues)('number %s returns %s', (number, result) => {
+            expect(register.getName(number)).toEqual(result);
+        });
+    });
 
-    test.each(testValues)('number %s returns %p', (number, result) => {
-        expect(register.getName('0000')).toBeNull();
-    })
+    test('Test 3: wrong number (non existing) "0000"', () => {
+        expect(register.getName('0000')).toEqual({});
+    });
+
+    test('Test 4: missing parameter', () => {
+        expect(() => register.getName()).toThrow('missing parameter');
+    });
 });

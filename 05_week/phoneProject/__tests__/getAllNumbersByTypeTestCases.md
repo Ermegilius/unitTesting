@@ -55,7 +55,7 @@ returns
 ]
 ```
 
-### Test : type: work
+### Test 2: type: work
 
 test uses default data
 
@@ -66,12 +66,12 @@ returns
 	{
 		"firstName": "Leila",
 		"lastName": "Musterfrau",
-		"phones": [{ "type": "work", "number": "9876543210" }]
+		"number": [{ "type": "work", "number": "9876543210" }]
 	},
 	{
 		"firstName": "Leila",
 		"lastName": "Musterfrau",
-		"phones": [{ "type": "work", "number": "00022233344" }]
+		"number": [{ "type": "work", "number": "00022233344" }]
 	},
 	{
 		"firstName": "Matt",
