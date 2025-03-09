@@ -1,0 +1,62 @@
+[
+	{
+		"id": 1,
+		"name": "NoSql - New Hope",
+		"author": "Antony Lee",
+		"price": 200,
+		"publisher": "ICT books",
+		"keywords": ["Computers", "Gaming", "Future SQL"],
+		"extras": {
+			"comments": "no comments",
+			"type": "e-book",
+			"edition": "first edition"
+		}
+	},
+	{
+		"id": 2,
+		"name": "Rebellion of Sophie Q. Lister",
+		"author": "Felix Harris",
+		"price": 15,
+		"publisher": "Xyz publishing",
+		"keywords": ["Gaming", "History", "Computers"],
+		"extras": {
+			"comments": "collectors edition",
+			"type": "softcover",
+			"edition": "sixth edition"
+		}
+	},
+	{
+		"id": 3,
+		"name": "SQL-mysteries",
+		"author": "Antony Lee",
+		"price": 36,
+		"publisher": "Lion books",
+		"keywords": ["Future SQL", "Gaming", "mystery"],
+		"extras": {
+			"comments": "no comments",
+			"type": "pocketbook",
+			"edition": "third edition"
+		}
+	},
+	{
+		"id": 4,
+		"name": "Maria and My",
+		"author": "Antony Lee",
+		"price": 200,
+		"publisher": "Antony Lee publishing",
+		"keywords": ["mystery", "Computers", "Future SQL"],
+		"extras": {
+			"comments": "no comments",
+			"type": "softcover",
+			"edition": "seventh edition"
+		}
+	},
+	{
+		"id": 5,
+		"name": "Hacking databases",
+		"author": "Emily White",
+		"price": 300,
+		"publisher": "ICT books",
+		"keywords": ["Gaming", "Computers", "Future SQL"]
+	}
+]
