@@ -1,0 +1,6 @@
+{
+	"name": "es6imports",
+	"version": "1.0.0",
+	"type": "module",
+	"description": "demo of imports in ES6"
+}

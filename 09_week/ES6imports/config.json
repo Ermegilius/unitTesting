@@ -1,0 +1,8 @@
+{
+	"libraries": {
+		"folder": "libraries",
+		"library": "testA.js",
+		"module": "moduleA.js",
+		"static": "abc.js"
+	}
+}
